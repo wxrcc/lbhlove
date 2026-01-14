@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二次元情侣相册 - 时间轴回忆录</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="timeline-container">
+        <!-- 头部 -->
+        <header class="timeline-header">
+            <button class="back-btn" id="backBtn" title="返回登录">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            
+            <div class="header-content">
+                <div class="header-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h1>我们的爱情时间轴</h1>
+                <p>沿着时间线回顾我们的甜蜜时刻 · 每张照片都是爱的见证</p>
+                
+                <!-- 时间轴导航 -->
+                <div class="timeline-nav">
+                    <button class="year-filter active" data-year="all">全部</button>
+                    <button class="year-filter" data-year="2023">2023年</button>
+                    <button class="year-filter" data-year="2024">2024年</button>
+                    <button class="scroll-top-btn" id="scrollTopBtn">
+                        <i class="fas fa-arrow-up"></i> 回到顶部
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- 时间轴主体 -->
+        <main class="timeline-main">
+            <!-- 时间线 -->
+            <div class="timeline-line"></div>
+            
+            <!-- 时间轴项目容器 -->
+            <div class="timeline-items" id="timelineItems">
+                <!-- 时间轴项目将通过JavaScript动态生成 -->
+            </div>
+            
+            <!-- 加载更多 -->
+            <div class="load-more-container">
+                <button class="load-more-btn" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i> 加载更多回忆
+                </button>
+                <p class="photo-count">已显示 <span id="shownCount">0</span> / <span id="totalCount">0</span> 张照片</p>
+            </div>
+        </main>
+
+        <!-- 照片查看模态框 -->
+        <div class="photo-modal" id="photoModal">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-photo-container">
+                    <img id="modalPhoto" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h3 id="modalTitle"></h3>
+                    <div class="modal-meta">
+                        <span class="modal-date"><i class="far fa-calendar"></i> <span id="modalDate"></span></span>
+                        <span class="modal-location"><i class="fas fa-map-marker-alt"></i> <span id="modalLocation"></span></span>
+                    </div>
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <footer class="timeline-footer">
+            <p><span class="heartbeat"><i class="fas fa-heart"></i></span> 沿着时间线，爱在生长 · 我们的故事还在继续</p>
+            <p>© 2023-2024 二次元情侣时间轴 · 每一刻都值得珍藏</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
